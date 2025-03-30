@@ -1,0 +1,55 @@
+# Node / npm / yarn / pnpm
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+package-lock.json  
+yarn.lock          
+pnpm-lock.yaml   
+
+# Build Output (Vite)
+dist/
+dist-ssr/
+*.local
+
+bower_components/
+.idea/
+.vscode/
+*.code-workspace
+*.sublime-project
+*.sublime-workspace
+*.tmproj
+*.tmproject
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Log files
+logs/
+*.log
+*.log.*
+
+# Environment variables
+.env
+.env.*
+!.env.example
+
+# Test Results
+coverage/
+lcov.info
+*.lcov
+.nyc_output/
+.grunt/
+
+# Temporary files
+*.tmp
+*.temp
+*.swp
+*.swo
