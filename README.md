@@ -77,7 +77,7 @@ Follow these instructions to get a copy of the project up and running on your lo
     PROXY_PORT=3001
 
     # URL the frontend uses to talk to the BACKEND proxy
-    VITE_BACKEND_PROXY_URL=http://localhost:3001
+    VITE_BACKEND_PROXY_URL=http://localhost:3001/proxy-request
     ```
 
 ### Running Locally
