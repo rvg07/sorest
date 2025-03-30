@@ -16,8 +16,7 @@ Includes support for query parameters, headers, and request bodies.
 *   [License](#license)
 ## Overview
 
-SoRest provides a simplified, browser-based interface for interacting with RESTful and SOAP APIs. It allows developers to organize requests into collections, configure various request details (method, URL, query params, headers, body), send the requests through a local proxy to bypass CORS issues during development, and inspect the responses (body, headers, status, time, size).
-All collection data is persisted locally using the browser's `localStorage`.
+SoRest provides a simplified, browser-based interface for interacting with RESTful and SOAP APIs. It allows developers to organize requests into collections, configure various request details (method, URL, query params, headers, body), send the requests through a local proxy to bypass CORS issues during development, and inspect the responses (body, headers, status, time, size). All collection data is persisted locally using the browser's `localStorage`.
 
 
 ## Tech Stack
@@ -70,7 +69,7 @@ Follow these instructions to get a copy of the project up and running on your lo
 
     **`.env.example` should look something like this:**
     ```env
-    # Port for the Vite frontend development server
+    # Port for the Vite frontend development server 
     PORT=5173
 
     # Backend Proxy Configuration
