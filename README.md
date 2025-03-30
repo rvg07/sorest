@@ -9,7 +9,7 @@ A web-based API client built using React, Tailwind CSS, and Vite and allows deve
 
 *   [Overview](#overview)
 *   [Tech Stack](#tech-stack)
-*   [Getting Started](#getting-started)
+*   [Getting Started](#setup)
     *   [Prerequisites](#prerequisites)
     *   [Installation](#installation)
 
@@ -36,7 +36,7 @@ SoRest provides a simplified, browser-based interface for interacting with RESTf
 
 
 
-## Getting Started
+## setup
 
 Follow these instructions to get a copy of the project up and running on your local machine for development and testing purposes.
 
