@@ -1,7 +1,8 @@
 # SoRest
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-A web-based API client built using React, Tailwind CSS, and Vite and allows developers to create and manage API request collections, send requests (GET, POST, etc.), and view responses. Includes support for query parameters, headers, authorization placeholders, and request bodies with basic syntax highlighting.
+A web-based API client built using React, Tailwind CSS, and Vite and allows developers to create and manage API request collections, send requests, and view responses. 
+Includes support for query parameters, headers, and request bodies.
 
 ![SoRest Screenshot](https://github.com/rvg07/sorest/blob/main/img/sorest.png)
 
@@ -15,22 +16,23 @@ A web-based API client built using React, Tailwind CSS, and Vite and allows deve
 
 ## Overview
 
-SoRest provides a simplified, browser-based interface for interacting with RESTful (and potentially SOAP) APIs. It allows developers to organize requests into collections, configure various request details (method, URL, query params, headers, body), send the requests through a local proxy to bypass CORS issues during development, and inspect the responses (body, headers, status, time, size). All collection data is persisted locally using the browser's `localStorage`.
+SoRest provides a simplified, browser-based interface for interacting with RESTful and SOAP APIs. It allows developers to organize requests into collections, configure various request details (method, URL, query params, headers, body), send the requests through a local proxy to bypass CORS issues during development, and inspect the responses (body, headers, status, time, size).
+All collection data is persisted locally using the browser's `localStorage`.
 
 
 ## Tech Stack
 
 *   **Frontend:**
     *   React (v18+)
-    *   JavaScript (JSX) / TypeScript (Optional - project history includes TS conversion)
-    *   Tailwind CSS (v3+) - Utility-first CSS framework
-    *   Vite - Frontend build tool
-    *   Lucide React - Icon library
-    *   `@uiw/react-codemirror` - Code editor component for request/response bodies
-    *   `axios` - Promise-based HTTP client for making requests (used by the proxy)
+    *   JavaScript (JSX)
+    *   Tailwind CSS (v3+)
+    *   Vite 
+    *   Lucide React
+    *   `@uiw/react-codemirror`  
+    *   `axios`
 *   **Backend Proxy (for CORS):**
     *   Node.js
-    *   Express - Web framework
+    *   Express.js
     *   `axios` - To make requests from the proxy to the target API
     *   `cors` - Node.js CORS middleware
 
