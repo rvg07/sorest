@@ -9,7 +9,7 @@ A web-based API client built using React, Tailwind CSS, and Vite and allows deve
 
 *   [Overview](#overview)
 *   [Tech Stack](#tech-stack)
-*   [Getting Started](#setup)
+*   [Setup](#setup)
     *   [Prerequisites](#prerequisites)
     *   [Installation](#installation)
 
