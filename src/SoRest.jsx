@@ -180,7 +180,14 @@ const SoRest = () => {
     setIsLoading(true);
     setApiResponse(null);
     const startTime = Date.now();
-    const proxyEndpoint = "http://localhost:3001/proxy-request";
+    const proxyEndpoint = import.meta.env.VITE_BACKEND_PROXY_URL || 'http://localhost:3001/proxy-request';
+
+    if (!proxyEndpoint) {
+      console.error("ERROR: VITE_BACKEND_PROXY_URL is not defined in .env file!");
+      setApiResponse({ status: null, statusText: "Config Error", headers: {}, data: "Error: Proxy URL not configured.", time: 0, size: 0, error: true });
+      setIsLoading(false);
+      return; // Stop if proxy URL is missing
+    }
 
     try {
       const response = await axios.post(
