@@ -3,7 +3,7 @@
 
 A web-based API client built using React, Tailwind CSS, and Vite and allows developers to create and manage API request collections, send requests (GET, POST, etc.), and view responses. Includes support for query parameters, headers, authorization placeholders, and request bodies with basic syntax highlighting.
 
-![SoRest Screenshot](../sorest/img/sorest.png)
+![SoRest Screenshot](https://github.com/rvg07/sorest/blob/main/img/sorest.png)
 
 ## Table of Contents
 
