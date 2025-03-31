@@ -76,7 +76,6 @@ const SoRest = () => {
       coll.id === collId ? { ...coll, name: newName } : coll
     );
     setCollections(updatedCollections);
-    // If the renamed collection is currently selected, update its value as well.
     if (selectedCollection && selectedCollection.id === collId) {
       setSelectedCollection((prev) => ({ ...prev, name: newName }));
     }
@@ -186,7 +185,7 @@ const SoRest = () => {
       console.error("ERROR: VITE_BACKEND_PROXY_URL is not defined in .env file!");
       setApiResponse({ status: null, statusText: "Config Error", headers: {}, data: "Error: Proxy URL not configured.", time: 0, size: 0, error: true });
       setIsLoading(false);
-      return; // Stop if proxy URL is missing
+      return;
     }
 
     try {

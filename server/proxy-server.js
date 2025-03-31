@@ -20,7 +20,7 @@ app.use(express.json());
 const allowedOriginsString = process.env.ALLOWED_ORIGINS;
 let allowedOrigins;
 
-console.log(`[Proxy] ALLOWED_ORIGINS from .env: ${allowedOriginsString}`); // Added tag for clarity
+console.log(`[Proxy] ALLOWED_ORIGINS from .env: ${allowedOriginsString}`);
 
 if (process.env.NODE_ENV === 'development') {
     const frontEndDevOrigin = 'http://localhost:5173';
@@ -48,7 +48,6 @@ const corsOptions = {
 };
 app.use(cors(corsOptions));
 
-// --- Proxy Endpoint ---
 app.post('/proxy-request', async (req, res) => {
     const { targetUrl, method, headers, data } = req.body;
 

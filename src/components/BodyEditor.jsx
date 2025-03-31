@@ -40,7 +40,7 @@ const BodyEditor = ({
         switch(rawType) {
             case 'JSON': return [json()];
             case 'XML': return [xml()];
-            default: return []; // plain text as default
+            default: return []; 
         }
     };
 
@@ -80,7 +80,7 @@ const BodyEditor = ({
                                  lineNumbers: true,
                                  foldGutter: true,
                                  highlightActiveLine: true,
-                                 autocompletion: true, // Enable basic features
+                                 autocompletion: true,
                                  syntaxHighlighting: true,
                              }}
                          />
