@@ -1,8 +1,15 @@
-# SoRest
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+<h1 align="center">
+  <br>
+  <a><img src="https://github.com/rvg07/sorest/blob/main/img/sorest_logo.png" alt="SoRest" width="200"></a>
+  <br>
+  SoRest
+  <br>
+</h1>
 
-A web-based API client built using React, Tailwind CSS, and Vite and allows developers to create and manage API request collections, send requests, and view responses. 
-Includes support for query parameters, headers, and request bodies.
+
+<h4>A web-based API client built using React.js, Tailwind CSS, and Vite and allows developers to create and manage API request collections, send requests, and view responses. Includes support for query parameters, headers, and request bodies.</h4>
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ![SoRest Screenshot](https://github.com/rvg07/sorest/blob/main/img/sorest.png)
 
@@ -22,7 +29,7 @@ SoRest provides a simplified, browser-based interface for interacting with RESTf
 ## Tech Stack
 
 *   **Frontend:**
-    *   React (v18+)
+    *   React.js (v18+)
     *   JavaScript (JSX)
     *   Tailwind CSS (v3+)
     *   Vite 
@@ -55,7 +62,7 @@ Follow these instructions to get a copy of the project up and running on your lo
     ```
 
 2.  **Install ALL dependencies:**
-    *(This installs React, Vite, Tailwind, etc....)*
+    *(This installs React.js, Vite, Tailwind, etc....)*
     ```bash
     npm install
     ```
@@ -63,9 +70,9 @@ Follow these instructions to get a copy of the project up and running on your lo
 3.  **Configure Environment Variables:**
     *   Rename the example environment `.env.example` file in `.env`.
     *   Edit the `.env` file with your local settings. Pay attention to:
-        *   `PROXY_PORT`: The port your backend proxy server will run on (defaults to `3001` in `proxy-server.js` if not set). Ensure this doesn't clash with other services.
+        *   `PROXY_PORT`: the port your backend proxy server will run on (defaults to `3001` in `proxy-server.js` if not set). Ensure this doesn't clash with other services.
  
-        *   `VITE_BACKEND_PROXY_URL`: The **full URL** your frontend should use to contact your backend proxy server (e.g., `http://localhost:3001`). **This is very important!**
+        *   `VITE_BACKEND_PROXY_URL`: the **full URL** your frontend should use to contact your backend proxy server (e.g., `http://localhost:3001/proxy-request`). **This is very important!**
 
     **`.env.example` should look something like this:**
     ```env
@@ -82,7 +89,7 @@ Follow these instructions to get a copy of the project up and running on your lo
 ### Running Locally
 
 1.  **Start Both Servers:**
-    Open a terminal in the project root and run the combined development script (assuming you've set up `concurrently` in `package.json` as shown previously):
+    open a terminal in the project root and run the combined development script (assuming you've set up `concurrently` in `package.json` as shown previously):
     ```bash
     npm run dev
     ```
@@ -91,7 +98,7 @@ Follow these instructions to get a copy of the project up and running on your lo
     *   Start the **Frontend Vite Development Server** (usually on `http://localhost:5173` or the next available port).
 
 2.  **Access the Application:**
-    In dev mode usually url is: `http://localhost:5173`.
+    in dev mode usually url is: `http://localhost:5173`.
 
 3.  **Usage:**
     *   When click "Send", the React app will make a request to the URL specified in `VITE_BACKEND_PROXY_URL` (`http://localhost:3001/proxy-request`).
