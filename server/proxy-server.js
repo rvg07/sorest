@@ -25,13 +25,13 @@ console.log(`[Proxy] ALLOWED_ORIGINS from .env: ${allowedOriginsString}`);
 if (process.env.NODE_ENV === 'development') {
     const frontEndDevOrigin = 'http://localhost:5173';
     allowedOrigins = [frontEndDevOrigin];
-    console.log(`[Proxy] Development Mode: Allowing CORS for FRONTEND origin: ${frontEndDevOrigin}`);
+    console.log(`[Proxy] Development mode: allowing CORS for FRONTEND origin: ${frontEndDevOrigin}`);
 } else if (allowedOriginsString) {
     allowedOrigins = allowedOriginsString.split(',').map(origin => origin.trim());
-    console.log(`[Proxy] Production Mode: Allowing CORS for FRONTEND origins: ${allowedOrigins.join(', ')}`);
+    console.log(`[Proxy] Production mode: allowing CORS for FRONTEND origins: ${allowedOrigins.join(', ')}`);
 } else {
     allowedOrigins = [];
-    console.warn('[Proxy] Production Mode: No ALLOWED_ORIGINS environment variable set. CORS is disabled.');
+    console.warn('[Proxy] Production mode: no ALLOWED_ORIGINS. CORS is disabled.');
 }
 
 const corsOptions = {
@@ -57,7 +57,7 @@ app.post('/proxy-request', async (req, res) => {
         console.error('[Proxy] Missing targetUrl or method.');
         return res.status(400).json({
             error: true,
-            message: 'Proxy request requires "targetUrl" and "method" in the JSON body.'
+            message: 'Please, proxy request requires "targetUrl" and "method" in the JSON body.'
         });
     }
 
@@ -99,18 +99,18 @@ app.post('/proxy-request', async (req, res) => {
         });
 
     } catch (error) {
-        console.error('[Proxy] Error during target request:', error.message);
+        console.error('[Proxy] Error on target request:', error.message);
         const axiosError = error;
         if (axiosError.response) {
-            res.status(502).json({ error: true, status: axiosError.response.status, message: `Proxy Target Error (${axiosError.response.status})` });
+            res.status(502).json({ error: true, status: axiosError.response.status, message: `Proxy target error (${axiosError.response.status})` });
         } else if (axiosError.request) {
-            res.status(504).json({ error: true, status: null, message: 'Proxy Target Timeout or Unreachable' });
+            res.status(504).json({ error: true, status: null, message: 'Proxy target yimeout or unreachable' });
         } else {
-            res.status(500).json({ error: true, status: null, message: `Proxy Internal Error: ${axiosError.message}` });
+            res.status(500).json({ error: true, status: null, message: `Proxy internal error: ${axiosError.message}` });
         }
     }
 });
 
 app.listen(PORT, LISTEN_ADDRESS, () => {
-    console.log(`Backend Proxy Server listening on http://${LISTEN_ADDRESS}:${PORT}`);
+    console.log(`BACKEND Proxy Server listening on http://${LISTEN_ADDRESS}:${PORT}`);
 });

@@ -3,7 +3,7 @@ export const generateUniqueId = (prefix) =>
         crypto.randomUUID ? crypto.randomUUID() : Date.now() + "_" + Math.random()
     }`;
 
-// we ensure items in an array have unique string IDs
+// we make sure items in an array have unique string ids => to avoid conflicts
 export const ensureStableStringIds = (items = [], prefix) => {
     if (!Array.isArray(items)) return [];
     const usedIds = new Set();
@@ -14,7 +14,6 @@ export const ensureStableStringIds = (items = [], prefix) => {
             stableId = generateUniqueId(prefix);
         }
         usedIds.add(stableId);
-
         return {
             ...item,
             id: stableId,

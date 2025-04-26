@@ -119,9 +119,7 @@ const Sidebar = ({
                             : "text-gray-300"
                         }`}
                       >
-                        {ep.name.startsWith("http")
-                          ? ep.name.split("/").pop() || ep.name
-                          : ep.name}
+                        {ep.name.startsWith("http") ? ep.name.split("/").pop() || ep.name : ep.name}
                       </span>
                       {ep.type && (
                         <span

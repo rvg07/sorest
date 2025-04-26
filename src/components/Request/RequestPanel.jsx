@@ -9,7 +9,6 @@ import { getMethodColor, getAllowedMethods } from '../../utils/helpers';
 import { generateUniqueId, ensureStableStringIds } from '../../utils/idUtils';
 
 const RAW_TYPES = { JSON: 'JSON', XML: 'XML', Text: 'Text' };
-
 const RequestPanel = ({
   selectedCollection,
   selectedEndpoint,
@@ -58,9 +57,8 @@ const RequestPanel = ({
       alert("Endpoint URL cannot be empty.");
       return;
     }
-    // we force method to POST if the endpoint type is SOAP.
+    //we force method to POST if the endpoint type is SOAP.
     const method = endpointData.type === "SOAP" ? "POST" : endpointData.method;
-
     const saveData = {
       ...endpointData,
       name: endpointUrl,

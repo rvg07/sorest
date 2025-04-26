@@ -13,7 +13,7 @@ const SoRest = () => {
       const parsed = stored ? JSON.parse(stored) : defaultCollections;
       return Array.isArray(parsed) ? parsed : defaultCollections;
     } catch (e) {
-      console.error("Failed to parse collections from localStorage", e);
+      console.error("Failed to parse collections: ", e);
       return defaultCollections;
     }
   });
@@ -126,7 +126,7 @@ const SoRest = () => {
   };
 
   const handleDeleteCollection = (collId) => {
-    if (!window.confirm("Are you sure you want to delete this entire collection?"))
+    if (!window.confirm("Are you SURE you want to delete this entire collection?"))
       return;
     const updated = collections.filter((coll) => coll.id !== collId);
     setCollections(updated);
@@ -171,8 +171,8 @@ const SoRest = () => {
   };
 
   const handleSaveCollection = (collId) => {
-    console.log("Saving collection (already saved to localStorage on change):", collId);
-    alert(`Collection changes are automatically saved locally.`);
+    console.log("Saving collection:", collId);
+    alert(`Collection changes saved!`);
   };
 
   const handleSendRequest = async (requestConfig) => {
@@ -183,7 +183,7 @@ const SoRest = () => {
 
     if (!proxyEndpoint) {
       console.error("ERROR: VITE_BACKEND_PROXY_URL is not defined in .env file!");
-      setApiResponse({ status: null, statusText: "Config Error", headers: {}, data: "Error: Proxy URL not configured.", time: 0, size: 0, error: true });
+      setApiResponse({ status: null, statusText: "Config error", headers: {}, data: "Error: Proxy URL not configured!!", time: 0, size: 0, error: true });
       setIsLoading(false);
       return;
     }
@@ -262,7 +262,7 @@ const SoRest = () => {
       } else {
         setApiResponse({
           status: null,
-          statusText: "Proxy Request Setup Error",
+          statusText: "Proxy request in error",
           headers: {},
           data: error.message,
           time: duration,

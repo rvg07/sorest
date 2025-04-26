@@ -89,7 +89,7 @@ const Headers = ({ rows = [], setRows }) => {
           </div>
         ))}
         {safeRenderRows.length === 0 && (
-          <div className="text-center text-xs text-gray-500 py-4 italic">No headers added.</div>
+          <div className="text-center text-xs text-gray-500 py-4 italic">No headers added!</div>
         )}
       </div>
     </div>

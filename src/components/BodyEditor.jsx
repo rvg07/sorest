@@ -45,8 +45,8 @@ const BodyEditor = ({
     };
 
     return (
-        <div className="mt-4 p-4 bg-gray-800 rounded-lg shadow-md flex flex-col flex-grow h-full"> {/* Layout */}
-            <div className="flex items-center space-x-4 mb-3 pb-3 border-b border-gray-700 flex-shrink-0"> {/* Header area */}
+        <div className="mt-4 p-4 bg-gray-800 rounded-lg shadow-md flex flex-col flex-grow h-full"> {/* layout */}
+            <div className="flex items-center space-x-4 mb-3 pb-3 border-b border-gray-700 flex-shrink-0"> {/* oour header area */}
                  {(['none', 'form-data', 'x-www-form-urlencoded', 'raw']).map(type => (
                      <label key={type} className="flex items-center space-x-1 text-xs text-gray-400 cursor-pointer">
                         <input type="radio" name="bodyType" value={type} checked={bodyType === type} onChange={handleTypeChange} className="form-radio h-3 w-3 text-blue-500 bg-gray-700 border-gray-600 focus:ring-blue-500"/>
@@ -65,7 +65,7 @@ const BodyEditor = ({
                  )}
             </div>
             {/* editor area */}
-            <div className="flex-grow flex flex-col overflow-hidden min-h-[200px]"> {/* Ensure minimum height and allow growth */}
+            <div className="flex-grow flex flex-col overflow-hidden min-h-[200px]">
                 {bodyType === 'none' && ( <div className="flex-grow flex items-center justify-center text-gray-500 italic text-sm">This request does not have a body.</div> )}
                 {bodyType === 'raw' && (
                      <div className="flex-grow h-full w-full overflow-auto border border-gray-700 rounded">
@@ -86,8 +86,8 @@ const BodyEditor = ({
                          />
                     </div>
                 )}
-                {bodyType === 'form-data' && ( <div className="text-gray-500 text-sm italic p-4 text-center flex-grow flex items-center justify-center">Form-data editor not implemented yet.</div> )}
-                 {bodyType === 'x-www-form-urlencoded' && ( <div className="text-gray-500 text-sm italic p-4 text-center flex-grow flex items-center justify-center">x-www-form-urlencoded editor not implemented.</div> )}
+                {bodyType === 'form-data' && ( <div className="text-gray-500 text-sm italic p-4 text-center flex-grow flex items-center justify-center">Form-data editor not implemented yet!!</div> )}
+                 {bodyType === 'x-www-form-urlencoded' && ( <div className="text-gray-500 text-sm italic p-4 text-center flex-grow flex items-center justify-center">x-www-form-urlencoded editor not implemented!!</div> )}
             </div>
         </div>
     );
