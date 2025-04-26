@@ -62,7 +62,7 @@ Follow these instructions to get a copy of the project up and running on your lo
     ```
 
 2.  **Install ALL dependencies:**
-    *(This installs React.js, Vite, Tailwind, etc....)*
+    *(this part installs React.js, Vite, Tailwind ....)*
     ```bash
     npm install
     ```
@@ -70,7 +70,7 @@ Follow these instructions to get a copy of the project up and running on your lo
 3.  **Configure Environment Variables:**
     *   Rename the example environment `.env.example` file in `.env`.
     *   Edit the `.env` file with your local settings. Pay attention to:
-        *   `PROXY_PORT`: the port your backend proxy server will run on (defaults to `3001` in `proxy-server.js` if not set). Ensure this doesn't clash with other services.
+        *   `PROXY_PORT`: the port your backend proxy server will run on (defaults to `3001` in `proxy-server.js` if not set). Make very sure this doesn't clash with other services.
  
         *   `VITE_BACKEND_PROXY_URL`: the **full URL** your frontend should use to contact your backend proxy server (e.g., `http://localhost:3001/proxy-request`). **This is very important!**
 
