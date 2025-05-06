@@ -11,7 +11,7 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-![SoRest Screenshot](https://github.com/rvg07/sorest/blob/main/img/sorest.png)
+![SoRest Screenshot](https://github.com/rvg07/sorest/blob/main/img/sorest.png) 
 
 ## Table of Contents
 
