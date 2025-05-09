@@ -167,7 +167,7 @@ const RequestPanel = ({
   const onRawTypeChange = useCallback((t) => handleRawTypeChange(t), [handleRawTypeChange]);
 
   return (
-    <div className="p-4 flex flex-col flex-grow overflow-hidden bg-gray-850">
+    <div className="p-4 flex flex-col flex-grow overflow-hidden bg-gray-850 resize-y min-h-[190px] max-h-[430px]">
       <Breadcrumb selectedCollection={selectedCollection} selectedEndpoint={selectedEndpoint} />
       {/* input row */}
       <div className="flex items-center space-x-3 p-4 bg-slate-800 shadow-md rounded-md">
