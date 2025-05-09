@@ -23,7 +23,7 @@ const Sidebar = ({
   };
 
   return (
-    <aside className="w-72 border-r border-gray-700 flex flex-col bg-gray-850">
+    <aside className="min-w-72 max-w-80 border-r border-gray-700 flex flex-col bg-gray-850 overflow-auto resize-x">
       <div className="p-4 m-3 bg-gray-800 rounded-md shadow-md">
         <div className="relative mb-3">
           <input
